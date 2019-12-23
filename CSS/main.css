@@ -33,7 +33,40 @@ a {
 /*
  * Content
  */
+ .content {
+     display: flex;
+     flex-wrap: wrap;
+ }
 
+ .content h4, .content .icon, .content p {
+     width: 100%;
+ }
+
+.content h4 {
+    font-style: italic;
+    color: tomato;
+}
+
+.content .icon {
+    order: -1;
+    text-align: center;
+    color: tomato;
+}
+
+.icon i {
+    font-size: 50px;
+}
+
+.content p {
+    border: 2px solid tomato;
+    border-radius: 16px;
+    margin: 0 5px;
+    padding: 5px 10px;
+}
+
+.vocabulary {
+    display: none;
+}
 /*
  * Navigator
  */
