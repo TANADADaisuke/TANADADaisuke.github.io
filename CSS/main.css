@@ -1,0 +1,43 @@
+/*
+ * General  *** Do not change here ***
+ */
+
+html, body, div, p, h1, h2, h3, h4, h5, h6,
+header, nav, button, img {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  color: #242424;
+  font-family: Roboto, "Sawarabi Gothic", sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+a {
+    color: #242424;
+    text-decoration: none;
+}
+
+/*
+ * Navbar
+ */
+
+/*
+ * Header
+ */
+
+/*
+ * Content
+ */
+
+/*
+ * Navigator
+ */
+
+/*
+ * footer
+ */
