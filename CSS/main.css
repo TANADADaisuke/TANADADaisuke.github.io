@@ -65,8 +65,35 @@ a {
 }
 
 .vocabulary {
+    display: block;
+    background-color: #ffb366;
+    margin: 5px 20px;
+    padding: 3px 18px 3px 13px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.vocabulary.close {
     display: none;
 }
+
+.vocabulary p {
+    display: inline;
+}
+
+.vocabulary span {
+    background-color: #fff;
+    border: 2px solid tomato;
+}
+
+.fa-times {
+    position: absolute;
+    top: -16px;
+    right: -10px;
+    padding: 18px;
+    color: tomato;
+}
+
 /*
  * Navigator
  */
