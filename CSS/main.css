@@ -64,8 +64,16 @@ a {
     padding: 5px 10px;
 }
 
+.vocabularies {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    width: 100%;
+}
+
 .vocabulary {
-    display: block;
+    position: relative;
+    display: none;
     background-color: #ffb366;
     margin: 5px 20px;
     padding: 3px 18px 3px 13px;
@@ -73,8 +81,8 @@ a {
     position: relative;
 }
 
-.vocabulary.close {
-    display: none;
+.vocabulary.open {
+    display: block;
 }
 
 .vocabulary p {
