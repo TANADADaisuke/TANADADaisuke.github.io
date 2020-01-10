@@ -49,14 +49,16 @@ a {
     color: tomato;
 }
 
-.icon {
+.subarea {
     order: -1;
     width: 100%;
     text-align: center;
-    color: tomato;
 }
 
-.icon i {
+.icon {
+    width: 100%;
+    text-align: center;
+    color: tomato;
     font-size: 50px;
 }
 
@@ -106,6 +108,30 @@ a {
     color: tomato;
 }
 
+@media screen and (min-width: 750px) {
+    .subarea {
+        width: 250px;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+    .icon {
+        font-size: 150px;
+    }
+    .content {
+        flex: 1;
+    }
+    .vocabularies {
+        width: 250px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .container {
+        width: 1000px;
+        margin: auto;
+    }
+}
 /*
  * Navigator
  */
