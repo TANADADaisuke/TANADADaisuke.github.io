@@ -117,11 +117,19 @@ aside {
     padding-top: 2em;
 }
 
+aside img {
+    width: 250px;
+    height: auto;
+}
+
 .social-link {
     display: inline-block;
     margin-right: 0.75em;
 }
 
+.social-link img {
+    width: 100%;
+}
 
 /*** Footer Styling ***/
 footer {
