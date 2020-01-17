@@ -111,6 +111,10 @@ a {
     color: tomato;
 }
 
+.branch, .found, .work-overtime, .colleague  {
+    display: none !important;
+}
+
 @media screen and (min-width: 750px) {
     .subarea {
         width: 250px;
