@@ -56,10 +56,12 @@ ul {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 .header__logo {
-  height: 72px;
+  height: 48px;
   margin-right: 1em;
   vertical-align: top;
   margin-top: 12px;
@@ -67,10 +69,12 @@ ul {
 
 .header__title {
   font-weight: 300;
-  font-size: 4em;
-  margin: 0.5em 0.25em;
+  font-size: 2.5em;
+  margin: 0.5em 2em 0.5em 0.25em;
   display: inline-block;
   color: #212121;
+  flex: 1;
+  text-align: center;
 }
 
 
