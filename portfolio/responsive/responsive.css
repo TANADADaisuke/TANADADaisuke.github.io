@@ -28,7 +28,7 @@
     margin-bottom: 0;
 }
 
- @media screen and (min-width: 600px) {
+ @media screen and (min-width: 550px) {
      .header {
        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
        min-height: 56px;
@@ -63,7 +63,7 @@
  * Top Level Navigation
  *
  */
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 550px) {
     .nav {
       display: block;
       position: relative;
@@ -104,7 +104,7 @@
  * Content
  *
  */
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 550px) {
     .hero {
         order: 0;
         width: 60%;
@@ -137,7 +137,7 @@
  * Recent news
  *
  */
- @media screen and (min-width: 600px) {
+ @media screen and (min-width: 550px) {
      .snippet {
        clear: both;
        margin: 24px 0;
@@ -148,4 +148,18 @@
        float: left;
        margin-right: 1em;
      }
+}
+
+/*
+ *
+ * Total
+ *
+ */
+
+@media screen and (min-width: 850px) {
+    main, .header__inner, .nav, .content {
+        width: 850px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
