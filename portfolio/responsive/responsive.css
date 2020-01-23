@@ -64,11 +64,14 @@
  *
  */
 @media screen and (min-width: 600px) {
-    .nav-resposive {
+    .nav {
       display: block;
+      position: relative;
+      transform: translate(0, 0);
       width: 100%;
       margin-left: auto;
       margin-right: auto;
+      background-color: inherit;
     }
 
     .nav__list {
@@ -83,6 +86,11 @@
       text-align: center;
       line-height: 24px;
       padding: 24px;
+      border: 0;
+    }
+
+    .nav a {
+        font-size: 1em;
     }
 
     #menu {

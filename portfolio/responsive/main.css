@@ -88,21 +88,18 @@ ul {
   width: 250px;
   padding: 0.5em;
   position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #ccc;
+  background-color: #fff;
+  -webkit-transform: translate(-100%, 0);
   transform: translate(-100%, 0);
   transition: transform 0.5s ease;
   z-index: 1
 }
 
 .nav.open {
+  -webkit-transform: translate(0, 0);
   transform: translate(0, 0);
 }
 
-.nav-resposive {
-    display: none;
-}
 
 .nav__list {
   width: 100%;
@@ -112,6 +109,7 @@ ul {
 
 .nav__item {
   box-sizing: border-box;
+  border-bottom: 1px solid #e0e0e0;
   display: block;
   width: 100%;
   text-align: center;
