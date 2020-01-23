@@ -62,19 +62,19 @@ ul {
 
 .header__logo {
   height: 48px;
-  margin-right: 1em;
+  margin-right: 0.5em;
   vertical-align: top;
   margin-top: 12px;
 }
 
 .header__title {
   font-weight: 300;
-  font-size: 2.5em;
-  margin: 0.5em 2em 0.5em 0.25em;
+  font-size: 2em;
+  margin-left: 0;
   display: inline-block;
+  margin-top: 24px;
   color: #212121;
   flex: 1;
-  text-align: center;
 }
 
 
