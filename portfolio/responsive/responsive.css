@@ -101,6 +101,39 @@
 
 /*
  *
+ * Content
+ *
+ */
+@media screen and (min-width: 600px) {
+    .hero {
+        order: 0;
+        width: 60%;
+    }
+    .weather {
+        order: 1;
+        width: 40%;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .hero {
+        width: 50%;
+    }
+    .top-news {
+        order: 1;
+        width: 50%;
+    }
+    .scores {
+        order: 2;
+        width: 60%;
+    }
+    .weather {
+        order: 3;
+    }
+}
+
+/*
+ *
  * Recent news
  *
  */

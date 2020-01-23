@@ -150,7 +150,14 @@ main {
  * Content
  *
  */
+.content {
+    display: flex;
+    flex-wrap: wrap;
+}
 
+.hero, .top-news, .scores, .weather, .recent-news {
+    order: 10;
+}
 
 /*
  *
