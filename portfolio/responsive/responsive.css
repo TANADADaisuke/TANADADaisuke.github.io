@@ -65,3 +65,21 @@
     }
 
 }
+
+/*
+ *
+ * Recent news
+ *
+ */
+ @media screen and (min-width: 600px) {
+     .snippet {
+       clear: both;
+       margin: 24px 0;
+     }
+
+     .snippet__thumbnail {
+       width: 100px;
+       float: left;
+       margin-right: 1em;
+     }
+}

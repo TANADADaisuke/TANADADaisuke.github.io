@@ -365,15 +365,16 @@ main {
 .snippet {
   clear: both;
   margin: 24px 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .snippet__thumbnail {
-  width: 100px;
-  float: left;
-  margin-right: 1em;
+  width: 100%;
 }
 
 .snippet__title {
+  width: 100%;
   font-weight: 500;
 }
 
