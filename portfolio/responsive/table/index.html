@@ -1,14 +1,165 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>resposive Table</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="main.css">
-  </head>
-  <body>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>resposive Table</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <link rel="stylesheet" type="text/css" href="responsive.css">
+    </head>
+    <body>
+        <!-- Example 1: Contained Scrolling -->
+        <h3>Example 1: Contained Scrolling</h3>
+        <div class="contained__table">
+            <table>
+                <thead>
+                    <th>Team</th>
+                    <th class="inning">1st</th>
+                    <th class="inning">2nd</th>
+                    <th class="inning">3rd</th>
+                    <th class="inning">4th</th>
+                    <th class="inning">5th</th>
+                    <th class="inning">6th</th>
+                    <th class="inning">7th</th>
+                    <th class="inning">8th</th>
+                    <th class="inning">9th</th>
+                    <th>Final</th>
+                </thead>
+                <tr>
+                    <td>
+                        <span class="shortName">TOR</span>
+                        <span class="longName">Toronto</span>
+                    </td>
+                    <td class="inning">0</td>
+                    <td class="inning">0</td>
+                    <td class="inning">0</td>
+                    <td class="inning">4</td>
+                    <td class="inning">0</td>
+                    <td class="inning">1</td>
+                    <td class="inning">0</td>
+                    <td class="inning">0</td>
+                    <td class="inning">0</td>
+                    <td class="final">5</td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="shortName">SF</span>
+                        <span class="longName">San Francisco</span>
+                    </td>
+                    <td class="inning">0</td>
+                    <td class="inning">0</td>
+                    <td class="inning">0</td>
+                    <td class="inning">4</td>
+                    <td class="inning">0</td>
+                    <td class="inning">0</td>
+                    <td class="inning">0</td>
+                    <td class="inning">0</td>
+                    <td class="inning">0</td>
+                    <td class="final">4</td>
+                </tr>
+            </table>
+        </div>
 
-  </body>
+        <!-- Example 2: Hidden Columns -->
+        <h3>Example 2: Hidden Columns</h3>
+        <div class="hidden__columns">
+            <table>
+                <thead>
+                    <th>Team</th>
+                    <th class="inning">1st</th>
+                    <th class="inning">2nd</th>
+                    <th class="inning">3rd</th>
+                    <th class="inning">4th</th>
+                    <th class="inning">5th</th>
+                    <th class="inning">6th</th>
+                    <th class="inning">7th</th>
+                    <th class="inning">8th</th>
+                    <th class="inning">9th</th>
+                    <th>Final</th>
+                </thead>
+                <tr>
+                    <td>
+                        <span class="shortName">TOR</span>
+                        <span class="longName">Toronto</span>
+                    </td>
+                    <td class="inning">0</td>
+                    <td class="inning">0</td>
+                    <td class="inning">0</td>
+                    <td class="inning">4</td>
+                    <td class="inning">0</td>
+                    <td class="inning">1</td>
+                    <td class="inning">0</td>
+                    <td class="inning">0</td>
+                    <td class="inning">0</td>
+                    <td class="final">5</td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="shortName">SF</span>
+                        <span class="longName">San Francisco</span>
+                    </td>
+                    <td class="inning">0</td>
+                    <td class="inning">0</td>
+                    <td class="inning">0</td>
+                    <td class="inning">4</td>
+                    <td class="inning">0</td>
+                    <td class="inning">0</td>
+                    <td class="inning">0</td>
+                    <td class="inning">0</td>
+                    <td class="inning">0</td>
+                    <td class="final">4</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Example 3: No more tables -->
+        <h3>Example 3: No more tables</h3>
+        <div class="no__more__tables">
+            <table>
+                <thead>
+                    <th>Team</th>
+                    <th class="inning">1st</th>
+                    <th class="inning">2nd</th>
+                    <th class="inning">3rd</th>
+                    <th class="inning">4th</th>
+                    <th class="inning">5th</th>
+                    <th class="inning">6th</th>
+                    <th class="inning">7th</th>
+                    <th class="inning">8th</th>
+                    <th class="inning">9th</th>
+                    <th>Final</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-th="Team">Toronto</td>
+                        <td data-th="1st">0</td>
+                        <td data-th="2nd">0</td>
+                        <td data-th="3rd">0</td>
+                        <td data-th="4th">4</td>
+                        <td data-th="5th">0</td>
+                        <td data-th="6th">1</td>
+                        <td data-th="7th">0</td>
+                        <td data-th="8th">0</td>
+                        <td data-th="9th">0</td>
+                        <td data-th="final">5</td>
+                    </tr>
+                    <tr>
+                        <td data-th="Team">San Francisco</td>
+                        <td data-th="1st">0</td>
+                        <td data-th="2nd">0</td>
+                        <td data-th="3rd">0</td>
+                        <td data-th="4th">4</td>
+                        <td data-th="5th">0</td>
+                        <td data-th="6th">0</td>
+                        <td data-th="7th">0</td>
+                        <td data-th="8th">0</td>
+                        <td data-th="9th">0</td>
+                        <td data-th="final">4</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
 </html>

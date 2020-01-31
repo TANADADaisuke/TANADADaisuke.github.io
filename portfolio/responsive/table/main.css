@@ -1,0 +1,32 @@
+body {
+    margin: 1em;
+}
+
+td {
+    min-width: 50px;
+    text-align: center;
+}
+
+th:first-of-type {
+    min-width: 125px;
+}
+
+/*
+ * Contained Table
+ */
+
+.contained__table {
+    width: 100%;
+    overflow-x: auto;
+}
+.contained__table .shortName {
+    display: none;
+}
+
+/*
+ * Hidden columns
+ */
+
+.hidden__columns .shortName {
+    display: none;
+}

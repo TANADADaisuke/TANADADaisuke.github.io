@@ -1,0 +1,41 @@
+/*
+ * Hidden columns
+ */
+
+@media screen and (max-width: 699px) {
+    .hidden__columns .longName {
+        display: none;
+    }
+    .hidden__columns .inning {
+        display: none;
+    }
+    .hidden__columns .shortName {
+        display: inline;
+    }
+}
+
+/*
+ * No more tables
+ */
+
+@media screen and (max-width: 699px) {
+    .no__more__tables table, .no__more__tables thead, .no__more__tables tbody, .no__more__tables th, .no__more__tables td, .no__more__tables tr {
+        display: block;
+    }
+    .no__more__tables thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    .no__more__tables td {
+        position: relative;
+        padding-left: 50%;
+        text-align: left
+    }
+    .no__more__tables td:before {
+        position: absolute;
+        left: 6px;
+        content: attr(data-th);
+        font-weight: bold;
+    }
+}
