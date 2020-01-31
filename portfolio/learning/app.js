@@ -9,14 +9,13 @@ $('.content').on('click', 'span', function(event) {
     // which meaning you want to know
     var targetText;
     targetText = $(event.target).text();
-    console.log(targetText);
     // find vocabulary card from hidden list and display it
     $('.vocabulary').each(function() {
         // text is a title of each vocabulary card
         var text;
         text = $(this).children().first().text();
         // if text is the one you want, display the card
-        if (targetText === text) {
+        if (targetText.toLowerCase() === text) {
             $(this).addClass('open');
         }
     });
