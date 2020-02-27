@@ -6,7 +6,7 @@ header,
 }
 
 #intro {
-    background: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full%20page/img%20%283%29.jpg")no-repeat center center fixed;
+    background: url("/Users/tdaisuke/TANADADaisuke.github.io/portfolio/project_LP/img/photos/cherryblossom-min.jpeg")no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -15,7 +15,7 @@ header,
 
 html {
     scroll-behavior: smooth;
-    scroll-padding: 50px;
+    scroll-padding: 75px;
 }
 
 .top-nav-collapse {
