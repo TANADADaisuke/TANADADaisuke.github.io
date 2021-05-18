@@ -4,45 +4,45 @@
     <meta charset="utf-8">
     <title>Portfolios</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans">
-    <link rel="stylesheet" href="CSS/normalize.min.css">
-    <link rel="stylesheet" href="CSS/app.css">
+    <meta name="description" content="Portfolios: Web application samples">
+    <link rel="stylesheet" href="CSS/styles.css">
 </head>
 <body>
-
     <header class="page-header">
         <h1>Portfolio</h1>
     </header>
-
-    <div class="container">
-        <main>
+    <div class="main-container">
+        <main class="page-main">
             <h2 class="visuallyhidden">Contents</h2>
 
-            <article>
+            <section class="welcome">
+                <h3><em>Welcome to my portfolio page</em></h3>
+                <p>I'm going to show you some Web Application Samples in this page. Enjoy some appilications and have fun!</p>
+                <p>I also eager to introduce you a funtastic learning service, <a href="https://www.udacity.com" target="_blank" rel="noopener">Udacity</a>. <a href="https://www.udacity.com" target="_blank" rel="noopener">Udacity</a> is an online school where you can learn the latest techical skill especially around digital world.</p>
+                <p>At the end of this page, I will show you how I'm learning digital skills throught <a href="https://www.udacity.com" target="_blank" rel="noopener">Udacity</a> service.</p>
+            </section>
+
+            <article class="page-article">
                 <header>
                     <h3>Web apps</h3>
-                    <time datetime="20-05-12T08:00">May 12</time>
+                    <time datetime="2019-10-28T08:00" class="article-time">Octobar 28, 2019</time>
                 </header>
-
-                <img src="img/pixel-art-maker-portfolio.png" alt="Pixel Art Maker">
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, laborum dolorem, dolor error nihil vitae similique necessitatibus omnis iure quasi vel iste repellendus alias! Asperiores voluptatem, maiores quibusdam eaque consequatur.</p>
-
-                <a class="read-more" href="portfolio/webapp/project-pixel-art-maker/index.html">See more</a>
+                <img src="img/pixel-art-maker-portfolio.png" alt="Pixel Art Maker" class="image" />
+                <p>Pixel Art Maker gives you an oppotunity for play around a web based grid design pallet. Players can select <strong>pixel size</strong> and <strong>color</strong> they want and then select the pixels to be filled with the color.</p>
+                <p>You can play this application from 
+                    <a href="portfolio/webapp/project-pixel-art-maker/index.html">here</a>
+                    .
+                </p>
+                <p>The usage of the application and the source are shown in <a href="https://github.com/TANADADaisuke/pixel-art-maker" rel="noopener">github page</a>.</p>
             </article>
 
-            <article>
+            <article class="page-article">
                 <header>
                     <h3>CSS Template</h3>
-                    <time datetime="2016-05-09T10:35">May 09</time>
+                    <time datetime="2016-05-09T10:35" class="article-time">May 09</time>
                 </header>
-
-                <img src="img/seeing-clearly.png" alt="Mountain peaks in Alaska">
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, laborum dolorem, dolor error nihil vitae similique necessitatibus omnis iure quasi vel iste repellendus alias! Asperiores voluptatem, maiores quibusdam eaque consequatur.</p>
-
-                <a class="read-more" href="#">See more</a>
+                <img src="img/css-template-sample.png" alt="CSS Temaplate Sample" class="image" />
+                <p>Some CSS samples are listed <a href="https://tanadadaisuke.github.io/portfolio/starter-code/">here</a>.</p>
             </article>
 
             <article>
@@ -51,7 +51,7 @@
                     <time datetime="2016-05-06T22:50">May 06</time>
                 </header>
 
-                <img src="img/python-portfolio.png" alt="python portfolio">
+                <img src="img/python-portfolio.png" alt="python portfolio" class="image" />
 
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, laborum dolorem, dolor error nihil vitae similique necessitatibus omnis iure quasi vel iste repellendus alias! Asperiores voluptatem, maiores quibusdam eaque consequatur.</p>
 
@@ -64,39 +64,38 @@
                     <time datetime="2016-05-06T22:49">May 06</time>
                 </header>
 
-                <img src="img/village-in-the-valley.jpg" alt="A quaint winter village nestled in the mountain">
+                <img src="img/village-in-the-valley.jpg" alt="A quaint winter village nestled in the mountain" class="image" />
 
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, laborum dolorem, dolor error nihil vitae similique necessitatibus omnis iure quasi vel iste repellendus alias! Asperiores voluptatem, maiores quibusdam eaque consequatur.</p>
 
                 <a class="read-more" href="portfolio/learning/vocabulary.html">See more</a>
             </article>
+            <aside>
+                <img src="img/profilepic.jpeg" alt="My profile picture" class="image" />
+        
+                <div class="sidebar-text">
+                    <h2>About Me</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque ducimus delectus esse repellendus. Harum esse laudantium itaque, aut cum molestias magni voluptatum veritatis alias. Veniam, impedit fuga ab saepe repudiandae.</p>
+        
+                    <section>
+                        <h3 class="visuallyhidden">Social Links</h3>
+                        <a class="social-link" href="#">
+                            <img src="img/social-twitter.png" alt="Twitter">
+                        </a>
+                        <a class="social-link" href="#">
+                            <img src="img/social-instagram.png" alt="Instagram">
+                        </a>
+                        <a class="social-link" href="#">
+                            <img src="img/social-google.png" alt="Google Plus">
+                        </a>
+                    </section>
+                </div>
+            </aside>
         </main>
-
-        <aside>
-            <img src="img/profilepic.jpeg" alt="My profile picture">
-
-            <div class="sidebar-text">
-                <h2>About Me</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque ducimus delectus esse repellendus. Harum esse laudantium itaque, aut cum molestias magni voluptatum veritatis alias. Veniam, impedit fuga ab saepe repudiandae.</p>
-
-                <section>
-                    <h3 class="visuallyhidden">Social Links</h3>
-                    <a class="social-link" href="#">
-                        <img src="img/social-twitter.png" alt="Twitter">
-                    </a>
-                    <a class="social-link" href="#">
-                        <img src="img/social-instagram.png" alt="Instagram">
-                    </a>
-                    <a class="social-link" href="#">
-                        <img src="img/social-google.png" alt="Google Plus">
-                    </a>
-                </section>
-            </div>
-        </aside>
     </div>
 
-    <footer>
-        Supported by Udacity
+    <footer class="page-footer">
+        <p>&copy;Tanada Daisuke 2021</p>
     </footer>
 
     <script src="JS/app-index.js"></script>

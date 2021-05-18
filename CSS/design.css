@@ -1,0 +1,112 @@
+/* full width header with centered text */
+.page-header {
+    width: 100vw;
+    text-align: center;
+    background: #00c3ff
+}
+
+
+/* full width footer with flex box alignment */
+.page-footer {
+    width: 100vw;
+    height: 100px;
+    background: #7c4906;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* main content with 95% width */
+.main-container {
+    width: 100vw;
+    background: linear-gradient(#f8f40b, #48f513, #1470e9)
+}
+
+
+.page-main {
+    width: 97vw;
+    margin: auto;
+}
+
+
+/* General rules */
+.visuallyhidden {
+    display: none;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: serif;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+
+h1 {
+    font-size: 3em;
+}
+
+
+h2 {
+    font-size: 2.4em;
+}
+
+
+h3 {
+    font-size: 1.8em;
+    text-decoration: underline;
+}
+
+
+h4 {
+    font-size: 1.4em;
+}
+
+
+h5 {
+    font-size: 1.1em;
+}
+
+h6 {
+    font-size: 0.9em;
+}
+
+
+p {
+    margin: 0 0 0.5em;
+    padding: 0;
+}
+
+
+a {
+    color: #1470e9;
+    text-decoration:underline;
+}
+
+
+a:hover {
+    background: rgba(50, 186, 240, 0.2)
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
+
+.image {
+    width: 100%;
+}

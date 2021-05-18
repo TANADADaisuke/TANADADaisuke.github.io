@@ -1,0 +1,34 @@
+/* Welcome section with flex box */
+.welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2em;
+}
+
+
+.welcome p {
+    text-align: center;
+}
+
+
+/* Articles with flex box */
+.page-article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+.page-article header,
+.page-article p {
+    width: 100%;
+}
+
+
+.article-time {
+    font-size: 0.9em;
+    font-style: italic;
+}
