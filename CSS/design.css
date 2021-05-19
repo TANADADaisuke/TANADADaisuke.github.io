@@ -46,8 +46,9 @@
 
 .page-aside h2 span {
     font-size: 0.7em;
-    padding: 2px;
+    display:inline-block;
     border-bottom: 3px solid #fffff8;
+    margin-bottom: 0.5em;
 }
 
 
