@@ -26,10 +26,79 @@
 
 
 .page-main {
-    width: 97vw;
+    width: 95vw;
     margin: auto;
 }
 
+
+/* aside content with flex box */
+.page-aside {
+    width: 95vw;
+    margin: auto;
+    color: #fffff8;
+}
+
+.page-aside h2 span {
+    font-size: 0.7em;
+    padding: 2px;
+    border-bottom: 3px solid #fffff8;
+}
+
+
+.portfolio-picture {
+    width: 45vw;
+    height: 45vw;
+    background-image: url("../img/profilepic.jpeg");
+    background-size: cover;
+    background-position: center;
+    float: left;
+    margin: 0  0.5em 0.5em 0;
+}
+
+
+.social-link {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 40px);
+    grid-template-rows: 40px;
+    grid-template-areas:"tw ig go";
+    grid-gap: 30px;
+    justify-content: center;
+    padding-bottom: 1em;
+}
+
+
+.social-link span {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
+.twitter {
+    grid-area: tw;
+    background-image: url("../img/social-twitter.png");
+}
+
+
+.instagram {
+    grid-area: ig;
+    background-image: url("../img/social-instagram.png");
+}
+
+
+.google {
+    grid-area: go;
+    background-image: url("../img/social-google.png");
+}
+
+
+.social-link a:hover {
+    background-color: transparent;
+}
 
 /* General rules */
 .visuallyhidden {
@@ -63,7 +132,6 @@ h2 {
 
 h3 {
     font-size: 1.8em;
-    text-decoration: underline;
 }
 
 
@@ -80,6 +148,12 @@ h6 {
     font-size: 0.9em;
 }
 
+
+h3 span {
+    display: inline;
+    padding-bottom: 5px;
+    border-bottom: 3px solid #000;
+}
 
 p {
     margin: 0 0 0.5em;
