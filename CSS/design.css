@@ -21,21 +21,27 @@
 /* main content with 95% width */
 .main-container {
     width: 100vw;
-    background: linear-gradient(#f8f40b, #48f513, #1470e9)
+    background: linear-gradient(#f8f40b, #48f513, #1470e9);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "main" "aside";
 }
 
 
 .page-main {
-    width: 95vw;
+    width: 95%;
     margin: auto;
+    grid-area: main;
 }
 
 
-/* aside content with flex box */
+/* aside content with float design */
 .page-aside {
-    width: 95vw;
+    width: 95%;
     margin: auto;
     color: #fffff8;
+    grid-area: aside;
 }
 
 .page-aside h2 span {
@@ -48,14 +54,17 @@
 .portfolio-picture {
     width: 45vw;
     height: 45vw;
+    float: left;
+    margin: 0  0.5em 0.5em 0;
     background-image: url("../img/profilepic.jpeg");
     background-size: cover;
     background-position: center;
-    float: left;
-    margin: 0  0.5em 0.5em 0;
 }
 
 
+/* social links are placed inside the aside content.
+ * each icon is placed using grid system and background image.
+ */
 .social-link {
     width: 100%;
     display: grid;
@@ -99,6 +108,7 @@
 .social-link a:hover {
     background-color: transparent;
 }
+
 
 /* General rules */
 .visuallyhidden {
