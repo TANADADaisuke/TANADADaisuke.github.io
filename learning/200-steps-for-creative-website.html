@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>200 Steps For Creative Website</title>
+        <meta description="Handwritten note for making creative website" >
+        <link rel="stylesheet" href="../CSS/styles.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Cousine&family=Lora&family=Noto+Sans+JP&family=Noto+Serif+JP&family=Roboto&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header class="page-header">
+            <div class="logo">
+                <p>CODE FOR<br>EVERYONE</p>
+                <a href=""><span></span></a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="">articles</a></li>
+                    <li><a href="">videos</a></li>
+                    <li><a href="">tutorial</a></li>
+                    <li><a href="">newsletter</a></li>
+                    <li><a href="">books</a></li>
+                    <li><a href="">almanac</a></li>
+                </ul>
+            </nav>
+            <button type="button" class="sign-up">sign up</button>
+        </header>
+        <div class="page-container">
+            <main class="page-main">
+
+                <header class="main-header">
+                    <h1>200 Steps For Creative Website</h1>
+                </header>
+
+                <h2 class="visuallyhidden">content</h2>
+
+                <section class="section">
+                    
+                    <header class="section-header">
+                        <h3>Code For Everyone</h3>
+                    </header>
+
+                    <article class="article">
+                        <p>Coding is "OPEN"! No matter how old you are, no matter where you live, no matter whethere you've learnd programming skills or not, you <em>CAN</em> code! </p>
+                        <p>Let's make a creative website! You can do <em>anything</em> you want. Are you ready? Follow the instructions below!</p>
+                    </article>
+
+                    <article class="article">
+                        <h4>Construct your development environment</h4>
+                        <p>...</p>
+                    </article>
+                    <article class="article">
+                        <h4>Fundamental structure construction</h4>
+                        <ol>
+                            <li>
+                                <h5>Declare HTML5</h5>
+                                <pre class="code-viewer">
+                                    <code>
+                                        &lt;!DOCTYPE html&gt;
+                                    </code>
+                                </pre>
+                            </li>
+                            <li>
+                                <h5>structure html</h5>
+                                <pre class="code-viewer">
+                                    <code>
+                                        &lt;html lang="en"&gt;
+                                        &lt;head&gt;
+                                            &lt;meta charset="utf-8"&gt;
+                                            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                                            &lt;title&gt;Page title&lt;/title&gt;
+                                            &lt;meta description="explanation for the page."&gt;
+                                        &lt;/head&gt;
+                                    </code>
+                                </pre>
+                            </li>
+                            <li>
+                                <h5>Load Google fonts</h5>
+                                <pre class="code-viewer">
+                                    <code>
+                                        &lt;link rel="preconnect" href="https://fonts.gstatic.com"&gt;
+                                        &lt;link href="https://fonts.googleapis.com/css2?family=Cousine&family=Lora&family=Noto+Sans+JP&family=Noto+Serif+JP&family=Roboto&display=swap" rel="stylesheet"&gt;
+                                    </code>
+                                </pre>
+                            </li>
+                            <li>
+                                <h5>Set fonts for CSS</h5>
+                                <pre class="code-viewer">
+                                    <code>
+                                        body {
+                                            font-family: 'Roboto', 'Noto Sans JP', sans-serif;
+                                        }
+                                        
+                                        header {
+                                            font-family: 'Lora', 'Noto Serif JP', serif;
+                                        }
+                
+                                        pre code{
+                                            font-family: 'Cousine', monospace;
+                                        }
+                                    </code>
+                                </pre>
+                            </li>
+                            <li>
+                                <h5>Load CSS</h5>
+                                <pre class="code-viewer">
+                                    <code>
+                                        &lt;link rel="stylesheet" href="css/styles.css"&gt;
+                                    </code>
+                                </pre>
+                            </li>
+                            <li>
+                                <h5>Load at least three css import</h5>
+                                <pre class="code-viewer">
+                                    <code>
+                                        /* Design sysmte */
+                                        @import url("design.css");
+                
+                                        /* Responsive design */
+                                        @import url("responsive.css");
+                
+                                        /* Content design */
+                                        @import url("content.css");
+                                    </code>
+                                </pre>
+                            </li>
+                            <li>Now, it time to create a design system!</li>
+                            <li>
+                                <h5>Construct a structure</h5>
+                                <pre class="code-viewer">
+                                    <code>
+                                        &lt;body&gt;
+                                            &lt;header class="page-header&gt;
+                                            &lt;/header&gt;
+                                            &lt;div class="page-container"&gt;
+                                                &lt;main class="page-main"&gt;
+                                                &lt;main&gt;
+                                                &lt;aside class="page-aside"&gt;
+                                                &lt;/aside&gt;
+                                            &lt;/div&gt;
+                                            &lt;footer class="page-footer&gt;
+                                            &lt;/footer&gt;
+                                        &lt;/body&gt;
+                                    </code>
+                                </pre>
+                            </li>
+                            <li>
+                                <h5>Set font and fontsize on body</h5>
+                                <pre class="code-viewer">
+                                    <code>
+                                        body {
+                                            width: 100%;
+                                            font-size: 16px;
+                                            font-family: 'Roboto', 'Noto Sans JP', sans-serif;
+                                        }                        
+                                    </code>
+                                </pre>
+                            </li>
+                            <li>
+                                <h5>Set border sizing for all element</h5>
+                                <pre class="code-viewer">
+                                    <code>
+                                        * {
+                                            margin: 0;
+                                            padding: 0;
+                                            box-sizing: border-box;
+                                        }                        
+                                    </code>
+                                </pre>
+                            </li>
+                            <li>
+                                <h5>Full width header with creative background</h5>
+                                <p>Page header should be constructed with &lt;h1&gt;.</p>
+                                <pre class="code-viewer">
+                                    <code>
+                                        &lt;header class="page-header&gt;
+                                            &lt;h1&gt;Page Title&lt;/h1&gt;
+                                        &lt;/header&gt;
+                                    </code>
+                                </pre>
+                                <p>With gradient background and border shadow (inset).</p>
+                                <pre class="code-viewer">
+                                    <code>
+                                        .page-header {
+                                            width: 100%;
+                                            text-align: center;
+                                            background: linear-gradient(120deg, rgba(0, 28, 255, 0.6), rgba(0, 195, 255, 0.6));
+                                            box-shadow: inset 0 -8px 6px -6px rgba(0, 0, 0, 0.4);
+                                        }                        
+                                    </code>
+                                </pre>
+                                <p>Again, inset shadow on top side of the header is created with pseudo-element.</p>
+                                <pre class="code-viewer">
+                                    <code>
+                                        .page-header:before {
+                                            z-index: 0;
+                                            position: absolute;
+                                            content: "";
+                                            top: 0;
+                                            left: 0;
+                                            width: 100%;
+                                            height: 10px;
+                                            box-shadow: inset 0 8px 6px -6px rgba(0, 0, 0, 0.4);
+                                        }                        
+                                    </code>
+                                </pre>
+                                <h6>Further Research</h6>
+                                <p>For more information about box shadow, see <a href="https://css-tricks.com/almanac/properties/b/box-shadow/" target="_blank" rel="noopener">CSS-TRICKS box shadow page</a>.</p>
+                            </li>
+                            <li>
+                                <p>Font size for page header is around 2rem (32px).</p>
+                                <pre class="code-viewer">
+                                    <code>
+                                        .page-header h1 {
+                                            font-size: 9vw;
+                                        }
+                
+                                        @media (min-width: 350px) {
+                                            .page-header h1 {
+                                                font-size: 2rem;
+                                            }
+                                        }
+                                    </code>
+                                </pre>
+                            </li>
+                            <li>
+                                <h5>Create a page container structure</h5>
+                                <p>Page container width is 100% and gradient background.</p>
+                                <p>Page container has a grid system.</p>
+                                <pre class="code-viewer">
+                                    <code>
+                                        &lt;div class="page-container"&gt;
+                                            &lt;main class="page-main"&gt;
+                                            &lt;/main&gt;
+                                            &lt;aside class="page-aside&gt;
+                                            &lt;/aside&gt;
+                                        &lt;/div&gt;
+                                    </code>
+                                </pre>
+                                <pre class="code-viewer">
+                                    <code>
+                                        .page-container {
+                                            width: 100%;
+                                            background: linear-gradient(150deg, rgba(18, 64, 196, 0.5), rgba(0, 255, 234, 0.5));
+                                            display: grid;
+                                            grid-template-columns: 100%;
+                                            grid-template-rows: auto;
+                                            grid-template-areas: "main" "aside";
+                                        }                        
+                                    </code>
+                                </pre>
+                                <h6>Further research</h6>
+                                <p>For more information about gradient, see <a href="https://developer.mozilla.org/ja/docs/Web/CSS/CSS_Images/Using_CSS_gradients" target="_blank" rel="noopener">gradient documentation</a>.</p>
+                                <p>For more information about grid system, see <a href=""></a></p>
+                            </li>
+                            <li>
+                                Both page main and page aside have 98% width.
+                                <pre class="code-viewer">
+                                    <code>
+                                        /* main content with 98% width */
+                                        .page-main {
+                                            width: 98%;
+                                            margin: auto;
+                                            grid-area: main;
+                                        }
+        
+                                        /* aside content with 98% width */
+                                        .page-aside {
+                                            width: 98%;
+                                            margin: auto;
+                                            grid-area: aside;
+                                        }
+                                    </code>
+                                </pre>
+                            </li>
+                            <li>
+                                The first child of main element is visually hidden content.
+                                <pre class="code-viewer">
+                                    <code>
+                                        &lt;main class="page-main"&gt;
+                                            &lt;h2 class="visuallyhidden"&gt;content&lt;/h2&gt;
+                                        &lt;/main&gt;
+                                    </code>
+                                </pre>
+                                <pre class="code-viewer">
+                                    <code>
+                                        .visuallyhidden {
+                                            display: none;
+                                        }
+                                    </code>
+                                </pre>
+                            </li>
+                            <li>
+                                Main element has sections which have flexbox system and sections have section header.
+                                <pre class="code-viewer">
+                                    <code>
+                                        &lt;main class="page-main"&gt;
+                                            &lt;section class="section"&gt;
+                                                &lt;header class="section-header"&gt;
+                                                    &lt;h3&gt;Section Header&lt;/h3&gt;
+                                                &lt;/header&gt;
+                                            &lt;/section&gt;
+                                        &lt;/main&gt;
+                                    </code>
+                                </pre>
+                                <pre class="code-viewer">
+                                    <code>
+                                        /* section design */
+                                        .section {
+                                            width: 100%;
+                                            min-height: 300px;
+                                            margin: 2rem 0;
+                                            background: rgba(255, 255, 248, 0.2);
+                                            border-radius: 10px;
+                                            box-shadow: 0 6px 6px -6px rgba(0, 0, 0, 0.4);
+                                            display: flex;
+                                            flex-direction: column;
+                                            align-items: stretch;
+                                            justify-content: flex-start;
+                                        }
+                                    </code>
+                                </pre>
+                                <pre class="code-viewer">
+                                    <code>
+                                        /* section header */
+                                        .section-header {
+                                            align-self: center;
+                                            margin: 1rem 0 0;
+                                            padding: 0 1rem;
+                                            box-shadow: 0 6px 6px -6px rgba(0, 0, 0, 0.4);
+                                        }
+        
+                                        .section-header h3 {
+                                            font-size: 10vw;
+                                        }
+        
+                                        @media (min-width: 300px) {
+                                            .section-header h3 {
+                                                font-size: 1.8rem;
+                                            }
+                                        }
+                                    </code>
+                                </pre>
+                            </li>
+                            <li>
+                                Section has several articles.
+                                <pre class="code-viewer">
+                                    <code>
+                                        &lt;section class="section"&gt;
+                                            &lt;article class="article"&gt;
+                                                &lt;h4&gt;Article Title&lt;/h4&gt;
+                                            &lt;/article&gt;
+                                        &lt;/section&gt;
+                                    </code>
+                                </pre>
+                                <pre class="code-viewer">
+                                    <code>
+                                        /* article design */
+                                        .article {
+                                            width: 100%;
+                                            min-height: 100px;
+                                            padding: 0 3%;
+                                            box-shadow: 0 6px 6px -6px rgba(0, 0, 0, 0.4);
+                                            display: flex;
+                                            flex-direction: column;
+                                            flex-wrap: wrap;
+                                            align-items: flex-start;
+                                            justify-content: flex-start;
+                                        }
+                                    </code>
+                                </pre>
+                            </li>
+                            <li>
+                                footer with 100% width.
+                                <pre class="code-viewer">
+                                    <code>
+                                        &lt;footer class="page-footer"&gt;
+                                            &lt;p&gt;&copy;Tanada Daisuke 2021&lt;/p&gt;
+                                        &lt;/footer&gt;
+                                    </code>
+                                </pre>
+                                <pre class="code-viewer">
+                                    <code>
+                                        /* full width footer with flex box alignment */
+                                        .page-footer {
+                                            width: 100vw;
+                                            height: 100px;
+                                            background: rgba(18, 64, 196, 0.5);
+                                            display: flex;
+                                            flex-direction: row;
+                                            align-items: center;
+                                            justify-content: center;
+                                        }
+                                    </code>
+                                </pre>
+                            </li>
+                        </ol>
+                    </article>
+
+                    <article class="article">
+                        <h4>Specific elements</h4>
+                        <ol>
+                            <li>
+                                Code viewer
+                                <pre class="code-viewer">
+                                    <code>
+                                        <span class="comment">// this area is coded as follow:</span>
+                                        &lt;pre class="code-viewer"&gt;
+                                            &lt;code&gt;
+                                                &lt;span class="comment"&gt;// this area is coded as follow:&lt;/span&gt;
+                                                ...
+                                            &lt;/code&gt;
+                                        &lt;/pre&gt;
+                                    </code>
+                                </pre>
+                            </li>
+                            <li>
+                                Image with a round inner shadow.
+                                <pre class="code-viewer">
+                                    <code>
+                                        &lt;figure&gt;
+                                            &lt;div class="image-container"&gt;
+                                                &lt;img src="../img/camellia.jpg" alt="camellia flower" class="image" /&gt;
+                                                &lt;span class="shadow"&gt;&lt;/span&gt;
+                                            &lt;/div&gt;
+                                        &lt;/figure&gt;
+                                    </code>
+                                </pre>
+                                There is <a href="https://gaurav5430.medium.com/extra-4px-at-the-bottom-of-html-img-8807a7ab0ca2" target="_blank" rel="noopener">Extra 4px at the bottom of html &lt;img&gt;</a>, take care. For each CSS:
+                                <pre class="code-viewer">
+                                    <code>
+                                        /* image */
+                                        figure {
+                                            margin: 1rem 0;
+                                            text-align: center;
+                                            align-self: center;
+                                        }
+
+                                        figcaption {
+                                            font-style: italic;
+                                            color: rgb(64, 64, 64);
+                                        }
+
+                                        .image {
+                                            width: 100%;
+                                            position: relative;
+                                            vertical-align: bottom;
+                                        }
+
+                                        .image-container {
+                                            width: 100%;
+                                            position:relative;
+                                        }
+
+                                        @media (min-width: 815px) {
+                                            .image {
+                                                width: 600px;
+                                            }
+
+                                            .image-container {
+                                                width: 600px;
+                                            }    
+                                        }
+
+                                        .image-container .shadow {
+                                            position: absolute;
+                                            top: 0;
+                                            left: 0;
+                                            width: 100%;
+                                            height: 100%;
+                                            background: radial-gradient(ellipse closest-side, transparent 70%, rgba(0, 0, 0, 0.4));
+                                        }
+                                    </code>
+                                </pre>
+                            </li>
+                            <li>
+                                Image with CSS background
+                                <pre class="code-viewer">
+                                    <code>
+                                        &lt;figure class="image-gallery-container&gt;
+                                            &lt;div id="photo-gallery-one" class="photo-box"&gt;&lt;/div&gt;
+                                            &lt;div id="photo-gallery-two" class="photo-box"&gt;&lt;/div&gt;
+                                            &lt;div id="photo-gallery-three" class="photo-box"&gt;&lt;/div&gt;
+                                            &lt;div id="photo-gallery-four" class="photo-box"&gt;&lt;/div&gt;
+                                        &lt;/figure&gt;
+                                    </code>
+                                </pre>
+                                And CSS:
+                                <pre class="code-viewer">
+                                    <code>
+                                        .image-gallery-container {
+                                            width: 100%;
+                                            margin: 0 0 10%;
+                                            display: grid;
+                                            grid-template-columns: 100%;
+                                            grid-auto-rows: minmax(150px, auto);
+                                            grid-gap: 1%;
+                                        }
+
+                                        @media (min-width: 500px) {
+                                            .image-gallery-container {
+                                                grid-template-columns: 47.5% 47.5%;
+                                                grid-gap: 5%;
+                                                margin: 0 0 5%;
+                                            }
+                                        }
+
+                                        .photo-box {
+                                            width: 100%;
+                                            padding: 66% 0 0;
+                                        }
+
+                                        #photo-gallery-one {
+                                            background: url(../img/camellia.jpg);
+                                            background-size: cover;
+                                            background-repeat: no-repeat;
+                                            background-position: center;
+                                        }
+
+                                        #photo-gallery-two {
+                                            background: url(../img/fall-pond.jpg);
+                                            background-size: cover;
+                                            background-repeat: no-repeat;
+                                            background-position: center;
+                                        }
+
+                                        #photo-gallery-three {
+                                            background: url(../img/cherry-blossom.jpg);
+                                            background-size: cover;
+                                            background-repeat: no-repeat;
+                                            background-position: center;
+                                        }
+
+                                        #photo-gallery-four {
+                                            background: url(../img/nature-earth.jpg);
+                                            background-size: cover;
+                                            background-repeat: no-repeat;
+                                            background-position: center;
+                                        }                                        
+                                    </code>
+                                </pre>
+                            </li>
+                            <li>If you want to use <code>::before</code> and <code>::after</code> pseudo-element, see <a href="https://css-tricks.com/almanac/selectors/a/after-and-before/" target="_blank" rel="noopener">CSS-TRICKS ::before / ::after </a>.</li>
+                        </ol>
+                    </article>
+                </section>
+            </main>
+            <aside class="page-aside"></aside>
+        </div>
+        <footer class="page-footer">
+            <p>&copy;Tanada Daisuke 2021</p>
+        </footer>
+        <script src="../JS/codeStyle.js"></script>
+    </body>
+</html>

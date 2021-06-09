@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Design System on Code For Everyone</title>
+        <meta description="A Design System is a set of rules to create consistent website. The Design system used throughout this page is demonstrated here.">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Cousine&family=Lora&family=Noto+Sans+JP&family=Noto+Serif+JP&family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../CSS/styles.css">
+    </head>
+    <body>
+        <header class="page-header">
+            <h1>Page Title</h1>
+        </header>
+        <div class="page-container">
+
+            <main class="page-main">
+            
+                <h2 class="visuallyhidden">content</h2>
+
+                <!-- Section sample -->
+                <section class="section">
+                    
+                    <header class="section-header">
+                        <h3>Section Header</h3>
+                    </header>
+                    
+                    <article class="article">
+                        <h4>Article Title</h4>
+                        <p>This is a sample article. Once upon a time, there was a little baby sleeping under a tree. A wind brew and birds sang.</p>
+                        <p>Suddenly, a lightening came.</p>
+                    </article>
+
+                    <article class="article">
+                        <h4>Article Title 2</h4>
+                        <p>This is also a sample article. Once upon a time, there was a little baby sleeping under a tree. A wind brew and birds sang.</p>
+                        <p>Suddenly, a lightening came.</p>
+                    </article>
+
+                </section>
+
+                <!-- How to use this design system -->
+                <section class="section">
+
+                    <header class="section-header">
+                        <h3>How to use<br>design system</h3>
+                    </header>
+
+                    <article class="article">
+                        <h4>Page Title</h4>
+                        <p>Page title is set as follow:</p>
+                        <pre class="code-viewer">
+                            <code>
+                                &lt;body&gt;
+                                    &lt;header class="page-header"&gt;
+                                        &lt;h1&gt;Page Title&lt;/h1&gt;
+                                    &lt;/header&gt;
+                                &lt;/body&gt;
+                            </code>
+                        </pre>
+                    </article>
+
+                    <article class="article">
+                        <h4>Section Header</h4>
+                        <p>Section Header is set as follow:</p>
+                        <pre class="code-viewer">
+                            <code>
+                                &lt;section class="section"&gt;
+                                    &lt;header class="section-header"&gt;
+                                        &lt;h3&gt;Section Header&lt;/h3&gt;
+                                    &lt;/header&gt;
+                                &lt;/section&gt;
+                            </code>
+                        </pre>
+                    </article>
+
+                    <article class="article">
+                        <h4>Article title and content</h4>
+                        <p>Article title and content is set as follow:</p>
+                        <pre class="code-viewer">
+                            <code>
+                                &lt;article class="article"&gt;
+                                    &lt;h4&gt;Article Title&lt;/h4&gt;
+                                    &lt;p&gt;Article content comes here...&lt;/p&gt;
+                                &lt;/article&gt;
+                            </code>
+                        </pre>
+                    </article>
+
+                </section>
+
+                <!-- Specific Elements -->
+                <section class="section">
+                    
+                    <header class="section-header">
+                        <h3>Specific Elements</h3>
+                    </header>
+                    
+                    <article class="article">
+                        <h4>Code</h4>
+                        <p>This is a sample for responsive code viewer.</p>
+                        <pre class="code-viewer">
+                            <code>
+                                <span class="comment">// get document object model</span>
+                                const bodyElement = document.querySelector('body');
+                                console.log(bodyElement);
+                            </code>
+                        </pre>
+                        <pre class="code-viewer">
+                            <code>
+                                <span class="comment">// this area is coded as follow:</span>
+                                &lt;pre class="code-viewer"&gt;
+                                    &lt;code&gt;
+                                        &lt;span class="comment"&gt;// this area is coded as follow:&lt;/span&gt;
+                                        ...
+                                    &lt;/code&gt;
+                                &lt;/pre&gt;
+                            </code>
+                        </pre>
+                    </article>
+
+                    <article class="article">
+                        <h4>Images</h4>
+                        <p>This is a sample of image with figure tag.</p>
+                        <figure>
+                            <div class="image-container">
+                                <img src="../img/fall-pond.jpg" alt="fall pond" class="image">
+                                <span class="shadow"></span>
+                            </div>
+                            <figcaption>Beautiful fall pond in Japanese garden</figcaption>
+                        </figure>
+
+                        <figure>
+                            <div class="image-container">
+                                <img src="../img/camellia.jpg" alt="camellia flower" class="image">
+                                <span class="shadow"></span>
+                            </div>
+                            <figcaption>Beautiful camellia flower</figcaption>
+                        </figure>
+
+                    </article>
+
+                    <article class="article">
+                        <h4>Image gallery with css background</h4>
+                        <figure class="image-gallery-container">
+                            <div id="photo-gallery-one" class="photo-box"></div>
+                            <div id="photo-gallery-two" class="photo-box"></div>
+                            <div id="photo-gallery-three" class="photo-box"></div>
+                            <div id="photo-gallery-four" class="photo-box"></div>
+                        </figure>
+                    </article>
+
+                </section>
+
+                <div style="width: 100%; height: 100vh;"></div>
+            </main>
+            
+            <aside class="page-aside">
+
+            </aside>
+        </div>
+        <footer class="page-footer">
+            <p>&copy;Tanada Daisuke 2021</p>
+        </footer>
+        <script src="../JS/codeStyle.js"></script>
+    </body>
+</html>

@@ -10,8 +10,8 @@
     }
 
 
-    .main-container {
-        grid-template-columns: 1fr 20vw;
+    .page-container {
+        grid-template-columns: 80% 20%;
         grid-template-areas: "main aside";
     }
 
@@ -52,7 +52,7 @@
 
 /* large screen */
 @media (min-width: 1201px) {
-    .main-container {
+    .page-container {
         grid-template-columns: 1fr 960px 240px 1fr;
         grid-template-areas: "na1 main aside na2";
     }
