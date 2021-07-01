@@ -60,10 +60,10 @@ function handleTouchStart(event) {
             scrollAreaRight.scrollTop = scrollAreaRight.scrollTop - currentDeltaY;
             
             // re-invoke momentum scroll
-            if (ongoingTouchIndexById(touches[i].identifier) >= 0) {
+            if (idx >= 0) {
                 window.requestAnimationFrame(renderScrollAction);
             } else {
-                console.log('scroll animation vanished');
+                alert('scroll animation vanished');
             }
         });
     }
