@@ -62,13 +62,12 @@ function handleTouchMove(event) {
             console.log('continuing touch ' + idx);
             const previousY = ongoingTouches[idx].pageY;
             const newY = touches[i].pageY;
-            const deltaY = previousY - newY;
-            accumulateDeltaY[idx].push(deltaY);
-            alert(deltaY);
+            currentDeltaY = previousY - newY;
+            accumulateDeltaY[idx].push(currentDeltaY);
 
             // // scrollTop overwrite
-            scrollArealeft.scrollTop = scrollArealeft.scrollTop + deltaY;
-            scrollAreaRight.scrollTop = scrollAreaRight.scrollTop - deltaY;
+            scrollArealeft.scrollTop = scrollArealeft.scrollTop + currentDeltaY;
+            scrollAreaRight.scrollTop = scrollAreaRight.scrollTop - currentDeltaY;
 
             // swap in a new touch record
             ongoingTouches.splice(idx, 1, copyTouch(touches[i]));
@@ -105,6 +104,7 @@ function handleTouchEnd(event) {
 
 let start = null;
 let scrollDistance = 2;
+let currentDeltaY = 0;
 
 function renderScrollAction(timestamp) {
     if (!start) start = timestamp;
