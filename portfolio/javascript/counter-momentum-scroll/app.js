@@ -103,15 +103,16 @@ function handleTouchEnd(event) {
 }
 
 let start = null;
-let scrollDistance = 200;
+let scrollDistance = 2;
 
 function renderScrollAction(timestamp) {
     if (!start) start = timestamp;
     const progress = timestamp - start;
     // alert(progress);
     // // scrollTop overwrite
-    scrollArealeft.firstElementChild.style.transform = 'translateY(-' + Math.min(progress, 2000) + 'px)';
-    scrollAreaRight.firstElementChild.style.transform = 'translateY(' + Math.min(progress, 2000) + 'px)';
+    // scrollArealeft.firstElementChild.style.transform = 'translateY(-' + Math.min(progress, 2000) + 'px)';
+    // scrollAreaRight.firstElementChild.style.transform = 'translateY(' + Math.min(progress, 2000) + 'px)';
+    scrollArealeft.scrollTop = scrollArealeft.scrollTop + scrollDistance;
     scrollAreaRight.scrollTop = scrollAreaRight.scrollTop - scrollDistance;
     
     // momentum scroll should remain for 3000ms
