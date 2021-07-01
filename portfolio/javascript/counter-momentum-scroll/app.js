@@ -49,18 +49,18 @@ function handleTouchStart(event) {
             // get index in ongoingTouches Array
             const idx = ongoingTouchIndexById(touches[i].identifier)
             
-            const currentDeltaY = accumulateDeltaY[idx][accumulateDeltaY[idx].length - 1];
-            // if (!start) start = timestamp;
-            // const progress = timestamp - start;
-            // alert(progress);
-            // // scrollTop overwrite
-            // scrollArealeft.firstElementChild.style.transform = 'translateY(-' + Math.min(progress, 2000) + 'px)';
-            // scrollAreaRight.firstElementChild.style.transform = 'translateY(' + Math.min(progress, 2000) + 'px)';
-            scrollArealeft.scrollTop = scrollArealeft.scrollTop + currentDeltaY;
-            scrollAreaRight.scrollTop = scrollAreaRight.scrollTop - currentDeltaY;
-            
-            // re-invoke momentum scroll
             if (idx >= 0) {
+                const currentDeltaY = accumulateDeltaY[idx][accumulateDeltaY[idx].length - 1];
+                // if (!start) start = timestamp;
+                // const progress = timestamp - start;
+                // alert(progress);
+                // // scrollTop overwrite
+                // scrollArealeft.firstElementChild.style.transform = 'translateY(-' + Math.min(progress, 2000) + 'px)';
+                // scrollAreaRight.firstElementChild.style.transform = 'translateY(' + Math.min(progress, 2000) + 'px)';
+                scrollArealeft.scrollTop = scrollArealeft.scrollTop + currentDeltaY;
+                scrollAreaRight.scrollTop = scrollAreaRight.scrollTop - currentDeltaY;
+    
+                // re-invoke momentum scroll
                 window.requestAnimationFrame(renderScrollAction);
             } else {
                 alert('scroll animation vanished');
