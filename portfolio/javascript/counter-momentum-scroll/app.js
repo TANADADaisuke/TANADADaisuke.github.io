@@ -109,12 +109,14 @@ function renderScrollAction(timestamp) {
     if (!start) start = timestamp;
     const progress = timestamp - start;
     // // scrollTop overwrite
-    scrollArealeft.scrollTop = scrollArealeft.scrollTop + scrollDistance;
+    scrollArealeft.firstElementChild.style.transform = 'translateY(-' + Math.min(progress, 2000) + 'px)';
+    scrollAreaRight.firstElementChild.style.transform = 'translateY(' + Math.min(progress, 2000) + 'px)';
     scrollAreaRight.scrollTop = scrollAreaRight.scrollTop - scrollDistance;
     
     // momentum scroll should remain for 3000ms
-    window.requestAnimationFrame(renderScrollAction);
-
+    if (progress < 2000) {
+        window.requestAnimationFrame(renderScrollAction);
+    }
 }
 
 
