@@ -52,7 +52,16 @@ function handleTouchMove(event) {
 
         if (idx >= 0) {
             console.log('continuing touch ' + idx);
-            alert('continuing touch');
+            const previousY = ongoingTouches[idx].pageY;
+            const newY = touches[i].pageY;
+            const deltaY = previousY - newY;
+            alert(deltaY);
+
+            // swap in a new touch record
+            ongoingTouches.splice(idx, 1, copyTouch(touches[i]));
+        } else {
+            console.log('cannot figure out what touch to continue');
+            alert('cannot figure out what touch to continue');
         }
     }
 }
