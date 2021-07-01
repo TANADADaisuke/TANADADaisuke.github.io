@@ -63,7 +63,7 @@ function handleTouchStart(event) {
                 // re-invoke momentum scroll
                 window.requestAnimationFrame(renderScrollAction);
             } else {
-                alert('scroll animation vanished');
+                console.log('scroll animation vanished');
             }
         });
     }
