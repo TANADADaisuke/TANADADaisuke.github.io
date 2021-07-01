@@ -63,8 +63,8 @@ function handleTouchMove(event) {
             accumulateDeltaY[idx].push(deltaY);
 
             // // scrollTop overwrite
-            // scrollArealeft.scrollTop = scrollArealeft.scrollTop + deltaY;
-            // scrollAreaRight.scrollTop = scrollAreaRight.scrollTop - deltaY;
+            scrollArealeft.scrollTop = scrollArealeft.scrollTop + deltaY;
+            scrollAreaRight.scrollTop = scrollAreaRight.scrollTop - deltaY;
 
             // swap in a new touch record
             ongoingTouches.splice(idx, 1, copyTouch(touches[i]));
@@ -89,6 +89,13 @@ function handleTouchEnd(event) {
         const idx = ongoingTouchIndexById(touches[i].identifier);
 
         if (idx >= 0) {
+            alert(accumulateDeltaY[idx].length);
+            alert(accumulateDeltaY[idx][accumulateDeltaY[idx].length - 5]);
+            alert(accumulateDeltaY[idx][accumulateDeltaY[idx].length - 4]);
+            alert(accumulateDeltaY[idx][accumulateDeltaY[idx].length - 3]);
+            alert(accumulateDeltaY[idx][accumulateDeltaY[idx].length - 2]);
+            alert(accumulateDeltaY[idx][accumulateDeltaY[idx].length - 1]);    
+    
             // remove that touch from ongoing touch list
             ongoingTouches.splice(idx, 1);
             accumulateDeltaY.splice(idx, 1);
@@ -96,13 +103,6 @@ function handleTouchEnd(event) {
             console.log('cannot figure out what touch to continue');
             alert('cannot figure out what touch to continue');
         }
-
-        alert(accumulateDeltaY[idx].length);
-        alert(accumulateDeltaY[idx][accumulateDeltaY[idx].length - 5]);
-        alert(accumulateDeltaY[idx][accumulateDeltaY[idx].length - 4]);
-        alert(accumulateDeltaY[idx][accumulateDeltaY[idx].length - 3]);
-        alert(accumulateDeltaY[idx][accumulateDeltaY[idx].length - 2]);
-        alert(accumulateDeltaY[idx][accumulateDeltaY[idx].length - 1]);    
     }
 }
 
