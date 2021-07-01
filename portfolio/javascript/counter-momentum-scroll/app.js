@@ -62,9 +62,9 @@ function handleTouchMove(event) {
             const deltaY = previousY - newY;
             accumulateDeltaY[idx].push(deltaY);
 
-            // scrollTop overwrite
-            scrollArealeft.scrollTop = scrollArealeft.scrollTop + deltaY;
-            scrollAreaRight.scrollTop = scrollAreaRight.scrollTop - deltaY;
+            // // scrollTop overwrite
+            // scrollArealeft.scrollTop = scrollArealeft.scrollTop + deltaY;
+            // scrollAreaRight.scrollTop = scrollAreaRight.scrollTop - deltaY;
 
             // swap in a new touch record
             ongoingTouches.splice(idx, 1, copyTouch(touches[i]));
