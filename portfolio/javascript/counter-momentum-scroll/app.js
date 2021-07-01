@@ -58,12 +58,10 @@ function handleTouchStart(event) {
             if (ongoingTouchIndexById(touches[i].identifier) >= 0) {
                 window.requestAnimationFrame(renderScrollAction);
             } else {
-                alert('scroll animation vanished');
+                console.log('scroll animation vanished');
             }
         });
-
     }
-
 }
 
 function handleTouchMove(event) {
