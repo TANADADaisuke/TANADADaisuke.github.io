@@ -113,9 +113,8 @@ function renderScrollAction(timestamp) {
     scrollAreaRight.scrollTop = scrollAreaRight.scrollTop - scrollDistance;
     
     // momentum scroll should remain for 3000ms
-    if (prograss < 3000) {
-        window.requestAnimationFrame(renderScrollAction);
-    }
+    window.requestAnimationFrame(renderScrollAction);
+
 }
 
 
