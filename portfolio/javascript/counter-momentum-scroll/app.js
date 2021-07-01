@@ -1,5 +1,6 @@
 // scroll right scroll area to the bottom on page load
 const headerContainer = document.querySelector('.header-container');
+const scrollArealeft = document.querySelector('.scroll-area-left');
 const scrollAreaRight = document.querySelector('.scroll-area-right');
 const scrollAreaRightContent = scrollAreaRight.firstElementChild;
 
@@ -60,6 +61,10 @@ function handleTouchMove(event) {
             const newY = touches[i].pageY;
             const deltaY = previousY - newY;
             accumulateDeltaY[idx].push(deltaY);
+
+            // scrollTop overwrite
+            scrollArealeft.scrollTop = scrollArealeft.scrollTop + deltaY;
+            scrollAreaRight.scrollTop = scrollAreaRight.scrollTop - deltaY;
 
             // swap in a new touch record
             ongoingTouches.splice(idx, 1, copyTouch(touches[i]));
