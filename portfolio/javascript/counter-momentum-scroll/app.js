@@ -49,7 +49,7 @@ function handleTouchStart(event) {
             // get index in ongoingTouches Array
             const idx = ongoingTouchIndexById(touches[i].identifier)
             
-            const currentDeltaY = accumulateDeltaY[idx][accumulateDeltaY.length - 1];
+            const currentDeltaY = accumulateDeltaY[idx][accumulateDeltaY[idx].length - 1];
             // if (!start) start = timestamp;
             // const progress = timestamp - start;
             // alert(progress);
