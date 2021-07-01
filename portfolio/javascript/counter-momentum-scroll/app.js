@@ -43,6 +43,9 @@ function handleTouchStart(event) {
         ongoingTouches.push(copyTouch(touches[i]));
         accumulateDeltaY.push([]);
     }
+
+    // invoke scroll animation
+    window.requestAnimationFrame(renderScrollAction);
 }
 
 function handleTouchMove(event) {
@@ -98,5 +101,22 @@ function handleTouchEnd(event) {
         }
     }
 }
+
+let start = null;
+let scrollDistance = 200;
+
+function renderScrollAction(timestamp) {
+    if (!start) start = timestamp;
+    const progress = timestamp - start;
+    // // scrollTop overwrite
+    scrollArealeft.scrollTop = scrollArealeft.scrollTop + scrollDistance;
+    scrollAreaRight.scrollTop = scrollAreaRight.scrollTop - scrollDistance;
+    
+    // momentum scroll should remain for 3000ms
+    if (prograss < 3000) {
+        window.requestAnimationFrame(renderScrollAction);
+    }
+}
+
 
 headerContainer.addEventListener('touchstart', handleTouchStart, {passive: false});
