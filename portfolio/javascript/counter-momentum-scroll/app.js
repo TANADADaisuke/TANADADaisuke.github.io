@@ -44,8 +44,8 @@ function handleTouchStart(event) {
         accumulateDeltaY.push([]);
     }
 
-    // invoke scroll animation
-    window.requestAnimationFrame(renderScrollAction);
+    // // invoke scroll animation
+    // window.requestAnimationFrame(renderScrollAction);
 }
 
 function handleTouchMove(event) {
@@ -64,6 +64,7 @@ function handleTouchMove(event) {
             const newY = touches[i].pageY;
             const deltaY = previousY - newY;
             accumulateDeltaY[idx].push(deltaY);
+            alert(deltaY);
 
             // // scrollTop overwrite
             scrollArealeft.scrollTop = scrollArealeft.scrollTop + deltaY;
