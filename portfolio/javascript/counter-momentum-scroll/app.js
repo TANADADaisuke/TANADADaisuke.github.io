@@ -88,14 +88,7 @@ function handleTouchEnd(event) {
     for (let i = 0; i < touches.length; i++) {
         const idx = ongoingTouchIndexById(touches[i].identifier);
 
-        if (idx >= 0) {
-            alert(accumulateDeltaY[idx].length);
-            alert(accumulateDeltaY[idx][accumulateDeltaY[idx].length - 5]);
-            alert(accumulateDeltaY[idx][accumulateDeltaY[idx].length - 4]);
-            alert(accumulateDeltaY[idx][accumulateDeltaY[idx].length - 3]);
-            alert(accumulateDeltaY[idx][accumulateDeltaY[idx].length - 2]);
-            alert(accumulateDeltaY[idx][accumulateDeltaY[idx].length - 1]);    
-    
+        if (idx >= 0) {    
             // remove that touch from ongoing touch list
             ongoingTouches.splice(idx, 1);
             accumulateDeltaY.splice(idx, 1);
