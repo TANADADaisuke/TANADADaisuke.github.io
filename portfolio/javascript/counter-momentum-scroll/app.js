@@ -12,20 +12,49 @@ scrollAreaRight.scrollTop = scrollAreaRightContent.getBoundingClientRect().heigh
 let ongoingTouches = [];
 
 // functions
+function copyTouch({ identifier, pageX, pageY }) {
+    return { identifier, pageX, pageY };
+}
+
+function ongoingTouchIndexById(idToFind) {
+    for (let i = 0; i < ongoingTouches.length; i++) {
+        const id = ongoingTouches[i].identifier;
+        if (id === idToFind) {
+            return i;
+        }
+    }
+    // not found
+    return -1;
+}
+
 function handleTouchStart(event) {
     // prevent default
     event.preventDefault();
-    console.log("touch start");
+    console.log("touch start...");
     const touches = event.changedTouches;
 
-    alert(touches);
+    for (let i = 0; i < touches.length; i++) {
+        ongoingTouches.push(copyTouch(touches[i]));
+    }
     // add touchmove and touchend event listener
     headerContainer.addEventListener('touchmove', handleTouchMove, {passive: false});
     headerContainer.addEventListener('touchend', handleTouchEnd, {passive: false});
 }
 
 function handleTouchMove(event) {
-    console.log('touch move');
+    // prevent default
+    event.preventDefault();
+    console.log("touch move...");
+    const touches = event.changedTouches;
+
+    for (let i = 0; i < touches.length; i++) {
+        const idx = ongoingTouchIndexById(touches[i].identifier);
+
+        if (idx >= 0) {
+            console.log('continuing touch ' + idx);
+            alert('continuing touch');
+        }
+    }
 }
 
 function handleTouchEnd(event) {
