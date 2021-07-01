@@ -86,6 +86,7 @@ function handleTouchEnd(event) {
         if (idx >= 0) {
             // remove that touch from ongoing touch list
             ongoingTouches.splice(idx, 1);
+            accumulateDeltaY.splice(idx, 1);
         } else {
             console.log('cannot figure out what touch to continue');
             alert('cannot figure out what touch to continue');
