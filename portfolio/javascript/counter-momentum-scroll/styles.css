@@ -1,0 +1,42 @@
+.header-container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: #fffff8;
+}
+
+
+.header-container .page-header {
+    z-index: 5;
+    background: linear-gradient(120deg, rgb(0, 28, 255), rgb(0, 195, 255));
+}
+
+
+.scroll-area {
+    width: 50%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    overflow: auto;
+}
+
+
+.scroll-area-left {
+    left: 0;
+    background: #444;
+}
+
+
+.scroll-area-right {
+    right: 0;
+    background: #ccc;
+}
+
+
+.hero-gradient {
+    width: 100%;
+    height: 300vh;
+    background: linear-gradient(rgb(0, 255, 106), rgb(0, 28, 255))
+}
+
