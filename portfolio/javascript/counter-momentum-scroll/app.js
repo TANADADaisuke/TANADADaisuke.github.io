@@ -42,10 +42,28 @@ function handleTouchStart(event) {
     for (let i = 0; i < touches.length; i++) {
         ongoingTouches.push(copyTouch(touches[i]));
         accumulateDeltaY.push([]);
+
+        // invoke scroll animation
+        window.requestAnimationFrame(function renderScrollAction(timestamp) {
+            if (!start) start = timestamp;
+            const progress = timestamp - start;
+            // alert(progress);
+            // // scrollTop overwrite
+            // scrollArealeft.firstElementChild.style.transform = 'translateY(-' + Math.min(progress, 2000) + 'px)';
+            // scrollAreaRight.firstElementChild.style.transform = 'translateY(' + Math.min(progress, 2000) + 'px)';
+            scrollArealeft.scrollTop = scrollArealeft.scrollTop + currentDeltaY;
+            scrollAreaRight.scrollTop = scrollAreaRight.scrollTop - currentDeltaY;
+            
+            // re-invoke momentum scroll
+            if (ongoingTouchIndexById(touches[i].identifier) >= 0) {
+                window.requestAnimationFrame(renderScrollAction);
+            } else {
+                alert('scroll animation vanished');
+            }
+        });
+
     }
 
-    // invoke scroll animation
-    window.requestAnimationFrame(renderScrollAction);
 }
 
 function handleTouchMove(event) {
@@ -108,19 +126,6 @@ let start = null;
 let scrollDistance = 2;
 let currentDeltaY = 0;
 
-function renderScrollAction(timestamp) {
-    if (!start) start = timestamp;
-    const progress = timestamp - start;
-    // alert(progress);
-    // // scrollTop overwrite
-    // scrollArealeft.firstElementChild.style.transform = 'translateY(-' + Math.min(progress, 2000) + 'px)';
-    // scrollAreaRight.firstElementChild.style.transform = 'translateY(' + Math.min(progress, 2000) + 'px)';
-    scrollArealeft.scrollTop = scrollArealeft.scrollTop + currentDeltaY;
-    scrollAreaRight.scrollTop = scrollAreaRight.scrollTop - currentDeltaY;
-    
-    // re-invoke momentum scroll
-    window.requestAnimationFrame(renderScrollAction);
-}
 
 
 headerContainer.addEventListener('touchstart', handleTouchStart, {passive: false});
