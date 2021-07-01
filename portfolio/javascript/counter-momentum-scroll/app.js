@@ -92,11 +92,11 @@ function handleTouchEnd(event) {
         }
 
         alert(accumulateDeltaY[idx].length);
-        alert(accumulateDeltaY[idx][accumulateDeltaY.length - 5]);
-        alert(accumulateDeltaY[idx][accumulateDeltaY.length - 4]);
-        alert(accumulateDeltaY[idx][accumulateDeltaY.length - 3]);
-        alert(accumulateDeltaY[idx][accumulateDeltaY.length - 2]);
-        alert(accumulateDeltaY[idx][accumulateDeltaY.length - 1]);    
+        alert(accumulateDeltaY[idx][accumulateDeltaY[idx].length - 5]);
+        alert(accumulateDeltaY[idx][accumulateDeltaY[idx].length - 4]);
+        alert(accumulateDeltaY[idx][accumulateDeltaY[idx].length - 3]);
+        alert(accumulateDeltaY[idx][accumulateDeltaY[idx].length - 2]);
+        alert(accumulateDeltaY[idx][accumulateDeltaY[idx].length - 1]);    
     }
 }
 
