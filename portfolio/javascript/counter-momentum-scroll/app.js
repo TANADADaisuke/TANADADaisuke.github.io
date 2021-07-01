@@ -108,7 +108,7 @@ let scrollDistance = 200;
 function renderScrollAction(timestamp) {
     if (!start) start = timestamp;
     const progress = timestamp - start;
-    alert(progress);
+    // alert(progress);
     // // scrollTop overwrite
     scrollArealeft.firstElementChild.style.transform = 'translateY(-' + Math.min(progress, 2000) + 'px)';
     scrollAreaRight.firstElementChild.style.transform = 'translateY(' + Math.min(progress, 2000) + 'px)';
