@@ -9,14 +9,13 @@ scrollAreaRight.scrollTop = scrollAreaRightContent.getBoundingClientRect().heigh
 
 // prevent touch swipe action on header container
 // global variable
-let touchMoveYList = [];
 let ongoingTouches = [];
 
 // functions
 function handleTouchStart(event) {
     // prevent default
     event.preventDefault();
-    console.log("touch start")
+    console.log("touch start");
     const touches = event.changedTouches;
 
     alert(touches);
@@ -26,7 +25,7 @@ function handleTouchStart(event) {
 }
 
 function handleTouchMove(event) {
-    touchMoveYList.push(event.)
+    console.log('touch move');
 }
 
 function handleTouchEnd(event) {
