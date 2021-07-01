@@ -9,6 +9,7 @@ scrollAreaRight.scrollTop = scrollAreaRightContent.getBoundingClientRect().heigh
 
 // prevent touch swipe action on header container
 // global variable
+let accumulateDeltaY = [];
 let ongoingTouches = [];
 
 // functions
@@ -30,20 +31,22 @@ function ongoingTouchIndexById(idToFind) {
 function handleTouchStart(event) {
     // prevent default
     event.preventDefault();
+    // add touchmove and touchend event listener
+    headerContainer.addEventListener('touchmove', handleTouchMove, {passive: false});
+    headerContainer.addEventListener('touchend', handleTouchEnd, {passive: false});
+
     console.log("touch start...");
     const touches = event.changedTouches;
 
     for (let i = 0; i < touches.length; i++) {
         ongoingTouches.push(copyTouch(touches[i]));
     }
-    // add touchmove and touchend event listener
-    headerContainer.addEventListener('touchmove', handleTouchMove, {passive: false});
-    headerContainer.addEventListener('touchend', handleTouchEnd, {passive: false});
 }
 
 function handleTouchMove(event) {
     // prevent default
     event.preventDefault();
+
     console.log("touch move...");
     const touches = event.changedTouches;
 
@@ -55,7 +58,7 @@ function handleTouchMove(event) {
             const previousY = ongoingTouches[idx].pageY;
             const newY = touches[i].pageY;
             const deltaY = previousY - newY;
-            alert(deltaY);
+            accumulateDeltaY.push(deltaY);
 
             // swap in a new touch record
             ongoingTouches.splice(idx, 1, copyTouch(touches[i]));
@@ -67,9 +70,38 @@ function handleTouchMove(event) {
 }
 
 function handleTouchEnd(event) {
+    // prevent default
+    event.preventDefault();
     // remove touchmove and touchend listener
     headerContainer.removeEventListener('touchmove', handleTouchMove, {passive: false});
     headerContainer.removeEventListener('touchend', handleTouchEnd, {passive: false});
+
+    console.log('touch end...');
+    const touches = event.changedTouches;
+
+    for (let i = 0; i < touches.length; i++) {
+        const idx = ongoingTouchIndexById(touches[i].identifier);
+
+        if (idx >= 0) {
+            const previousY = ongoingTouches[idx].pageY;
+            const newY = touches[i].pageY;
+            const deltaY = previousY - newY;
+            accumulateDeltaY.push(deltaY);
+
+            // remove that touch from ongoing touch list
+            ongoingTouches.splice(idx, 1);
+        } else {
+            console.log('cannot figure out what touch to continue');
+            alert('cannot figure out what touch to continue');
+        }
+    }
+
+    alert(accumulateDeltaY.length);
+    alert(accumulateDeltaY[accumulateDeltaY.length - 5]);
+    alert(accumulateDeltaY[accumulateDeltaY.length - 4]);
+    alert(accumulateDeltaY[accumulateDeltaY.length - 3]);
+    alert(accumulateDeltaY[accumulateDeltaY.length - 2]);
+    alert(accumulateDeltaY[accumulateDeltaY.length - 1]);
 }
 
 headerContainer.addEventListener('touchstart', handleTouchStart, {passive: false});
