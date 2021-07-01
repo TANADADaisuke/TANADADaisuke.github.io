@@ -44,8 +44,8 @@ function handleTouchStart(event) {
         accumulateDeltaY.push([]);
     }
 
-    // // invoke scroll animation
-    // window.requestAnimationFrame(renderScrollAction);
+    // invoke scroll animation
+    window.requestAnimationFrame(renderScrollAction);
 }
 
 function handleTouchMove(event) {
@@ -65,9 +65,9 @@ function handleTouchMove(event) {
             currentDeltaY = previousY - newY;
             accumulateDeltaY[idx].push(currentDeltaY);
 
-            // // scrollTop overwrite
-            scrollArealeft.scrollTop = scrollArealeft.scrollTop + currentDeltaY;
-            scrollAreaRight.scrollTop = scrollAreaRight.scrollTop - currentDeltaY;
+            // // // scrollTop overwrite
+            // scrollArealeft.scrollTop = scrollArealeft.scrollTop + currentDeltaY;
+            // scrollAreaRight.scrollTop = scrollAreaRight.scrollTop - currentDeltaY;
 
             // swap in a new touch record
             ongoingTouches.splice(idx, 1, copyTouch(touches[i]));
@@ -95,6 +95,8 @@ function handleTouchEnd(event) {
             // remove that touch from ongoing touch list
             ongoingTouches.splice(idx, 1);
             accumulateDeltaY.splice(idx, 1);
+            // reset currentDeltaY
+            currentDeltaY = 0;
         } else {
             console.log('cannot figure out what touch to continue');
             alert('cannot figure out what touch to continue');
@@ -113,13 +115,11 @@ function renderScrollAction(timestamp) {
     // // scrollTop overwrite
     // scrollArealeft.firstElementChild.style.transform = 'translateY(-' + Math.min(progress, 2000) + 'px)';
     // scrollAreaRight.firstElementChild.style.transform = 'translateY(' + Math.min(progress, 2000) + 'px)';
-    scrollArealeft.scrollTop = scrollArealeft.scrollTop + scrollDistance;
-    scrollAreaRight.scrollTop = scrollAreaRight.scrollTop - scrollDistance;
+    scrollArealeft.scrollTop = scrollArealeft.scrollTop + currentDeltaY;
+    scrollAreaRight.scrollTop = scrollAreaRight.scrollTop - currentDeltaY;
     
-    // momentum scroll should remain for 3000ms
-    if (progress < 10000) {
-        window.requestAnimationFrame(renderScrollAction);
-    }
+    // re-invoke momentum scroll
+    window.requestAnimationFrame(renderScrollAction);
 }
 
 
