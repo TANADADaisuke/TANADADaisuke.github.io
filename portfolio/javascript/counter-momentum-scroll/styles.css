@@ -3,6 +3,7 @@
     height: 100vh;
     position: relative;
     background: #fffff8;
+    z-index: 0;
 }
 
 
@@ -17,7 +18,7 @@
     height: 100vh;
     position: absolute;
     top: 0;
-    z-index: 0;
+    z-index: -1;
     overflow: auto;
 }
 
@@ -40,3 +41,18 @@
     background: linear-gradient(rgb(0, 255, 106), rgb(0, 28, 255))
 }
 
+
+.hero-text {
+    font-size: 3rem;
+    text-align: center;
+    width: 80%;
+    position: absolute;
+    top: 45%;
+    left: 10%;
+}
+
+
+.hero-text p {
+    margin: 0;
+    cursor: default;
+}
