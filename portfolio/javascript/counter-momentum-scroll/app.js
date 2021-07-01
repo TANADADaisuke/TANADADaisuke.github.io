@@ -41,12 +41,17 @@ function handleTouchStart(event) {
 
     for (let i = 0; i < touches.length; i++) {
         ongoingTouches.push(copyTouch(touches[i]));
-        accumulateDeltaY.push([]);
+        accumulateDeltaY.push([0]);
+
 
         // invoke scroll animation
         window.requestAnimationFrame(function renderScrollAction(timestamp) {
-            if (!start) start = timestamp;
-            const progress = timestamp - start;
+            // get index in ongoingTouches Array
+            const idx = ongoingTouchIndexById(touches[i].identifier)
+            
+            const currentDeltaY = accumulateDeltaY[idx][accumulateDeltaY.length - 1];
+            // if (!start) start = timestamp;
+            // const progress = timestamp - start;
             // alert(progress);
             // // scrollTop overwrite
             // scrollArealeft.firstElementChild.style.transform = 'translateY(-' + Math.min(progress, 2000) + 'px)';
@@ -78,8 +83,8 @@ function handleTouchMove(event) {
             console.log('continuing touch ' + idx);
             const previousY = ongoingTouches[idx].pageY;
             const newY = touches[i].pageY;
-            currentDeltaY = previousY - newY;
-            accumulateDeltaY[idx].push(currentDeltaY);
+            const deltaY = previousY - newY;
+            accumulateDeltaY[idx].push(deltaY);
 
             // // // scrollTop overwrite
             // scrollArealeft.scrollTop = scrollArealeft.scrollTop + currentDeltaY;
@@ -111,8 +116,8 @@ function handleTouchEnd(event) {
             // remove that touch from ongoing touch list
             ongoingTouches.splice(idx, 1);
             accumulateDeltaY.splice(idx, 1);
-            // reset currentDeltaY
-            currentDeltaY = 0;
+            // // reset currentDeltaY
+            // currentDeltaY = 0;
         } else {
             console.log('cannot figure out what touch to continue');
             alert('cannot figure out what touch to continue');
@@ -122,7 +127,7 @@ function handleTouchEnd(event) {
 
 let start = null;
 let scrollDistance = 2;
-let currentDeltaY = 0;
+// let currentDeltaY = 0;
 
 
 
