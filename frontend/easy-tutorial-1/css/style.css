@@ -132,3 +132,54 @@ p {
     z-index: 2;
     cursor: pointer;
 }
+
+
+/* ----- about ----- */
+#about {
+    padding: 100px 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.about-left-col {
+    flex-basis: 50%;
+}
+
+
+.about-left-col img {
+    width: 100%;
+}
+
+
+.about-right-col {
+    flex-basis: 50%;
+    text-align: right;
+}
+
+
+.about-text {
+    max-width: 500px;
+    margin-right: 100px;
+    display: inline-block;
+}
+
+
+.about-text h3 {
+    margin: 50px 0 10px;
+    font-size: 28px;
+    font-style: italic;
+}
+
+
+.about-text h4 {
+    font-size: 2opx;
+    font-style: italic;
+    color: #797979;
+}
+
+
+.about-text p {
+    margin-bottom: 2em;
+}
