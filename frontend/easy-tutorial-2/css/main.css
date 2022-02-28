@@ -87,6 +87,122 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+body {
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+/* ----- header style ----- */
+
+#header {
+  /* background-image: linear-gradient(to right, #a517ba, #5f1782); */
+  background-color: #999;
+  height: 50vh;
+}
+
+main div {
+  background-color: #444;
+  height: 200vh;
+}
+
+/* ----- navigation style ----- */
+
+#nav {
+  order: -1;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-image: linear-gradient(to right, #a517ba, #5f1782);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.nav-brand img {
+  height: 40px;
+  padding: 5px 0 5px 20px;
+}
+
+#menu-button {
+  margin: 0;
+  padding: 10px 20px;
+  outline: none;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.menu-line {
+  display: block;
+  width: 40px;
+  height: 6px;
+  margin-bottom: 6px;
+  background-color: #fff;
+  border-radius: 3px;
+}
+
+.menu-line:nth-child(3) {
+  margin: 0;
+}
+
+.nav-container {
+  /* set position relative for the child ul */
+  position: relative;
+  width: 100%;
+}
+
+.nav-list {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-image: linear-gradient(to right, #a517ba, #5f1782);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.nav-item {
+  list-style: none;
+  padding: .8em 1.2em;
+}
+
+.nav-item a {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  line-height: 1.2;
+}
+
+/* ----- media query for nav ----- */
+
+@media only screen and (min-width: 901px) {
+  #menu-button {
+    display: none;
+  }
+
+  .nav-container {
+    width: auto;
+    position: unset;
+    align-self: flex-end;
+  }
+
+  .nav-list {
+    width: auto;
+    background-image: none;
+    position: unset;
+    flex-direction: row;
+  }
+
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
