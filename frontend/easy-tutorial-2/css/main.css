@@ -102,7 +102,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: flex-end;
 }
 
 .left-col, .right-col {
@@ -315,6 +315,27 @@ body {
   outline: none;
   box-shadow: none;
   cursor: pointer;
+}
+
+
+/* ----- about us style ----- */
+
+#about-us {
+  background: #f8f9fa;
+  padding: 50px 0;
+}
+
+.about-title {
+  font-size: 40px;
+  margin-top: 8%;
+}
+
+.about-us ul {
+  padding-left: 1em;
+}
+
+.about-us ul li {
+  margin: 10px 0;
 }
 
 /* ==========================================================================
