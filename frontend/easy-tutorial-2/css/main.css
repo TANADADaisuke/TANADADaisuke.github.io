@@ -95,18 +95,71 @@ body {
   align-items: stretch;
 }
 
+.container {
+  width: 95%;
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.left-col, .right-col {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.first-col, .second-col, .third-col {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media only screen and (min-width: 901px) {
+  .container {
+    width: calc(40% + 495px)
+  }
+
+  .left-col, .right-col {
+    width: 50%;
+  }
+
+  .first-col, .second-col, .third-col {
+    width: 33.33%;
+  }  
+
+}
 /* ----- header style ----- */
 
 #header {
-  /* background-image: linear-gradient(to right, #a517ba, #5f1782); */
-  background-color: #999;
-  height: 50vh;
+  background-image: linear-gradient(to right, #a517ba, #5f1782);
+  color: #fff;
+  padding-top: 5%;
 }
 
-main div {
-  background-color: #444;
-  height: 200vh;
+.header-title {
+  font-size: 40px;
+  margin-top: 100px;
 }
+
+.play-btn {
+  width: 45px;
+  margin: 20px;
+}
+
+#header a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.image-fluid {
+  width: 100%;
+}
+
+.bottom-img {
+  width: 100%;
+}
+
 
 /* ----- navigation style ----- */
 
@@ -181,8 +234,6 @@ main div {
   line-height: 1.2;
 }
 
-/* ----- media query for nav ----- */
-
 @media only screen and (min-width: 901px) {
   #menu-button {
     display: none;
@@ -201,6 +252,69 @@ main div {
     flex-direction: row;
   }
 
+}
+
+
+/* ----- services style ----- */
+
+#services {
+  padding: 80px 0;
+}
+
+.service-img {
+  width: 100px;
+  margin-top: 20px;
+}
+
+.services {
+  padding: 20px;
+  text-align: center;
+}
+
+.services h4 {
+  padding: 5px;
+  margin: 25px 0 0;
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: 34px;
+  text-align: center;
+}
+
+.title::before {
+  content: '';
+  background: #7b1798;
+  height: 5px;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  transform: translateY(63px);
+}
+
+.title::after {
+  content: '';
+  background: #7b1798;
+  height: 10px;
+  width: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  transform: translateY(8px);
+}
+
+.service-btn {
+  display: block;
+  margin: 0 auto;
+  padding: 8px 25px;
+  border-radius: 20px;
+  background-image: linear-gradient(to right, #a517ba, #5f1782);
+  color: #fff;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  cursor: pointer;
 }
 
 /* ==========================================================================
