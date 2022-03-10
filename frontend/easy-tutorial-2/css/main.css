@@ -422,6 +422,58 @@ body {
   }
 }
 
+
+/* ----- footer style ----- */
+
+#footer {
+  background-image: linear-gradient(to right, #a517ba, #5f1782);
+  color: #fff;
+}
+
+#footer .container {
+  align-items: flex-start;
+}
+
+.footer-img {
+  width: 100%;
+}
+
+.footer-box {
+  padding: 20px;
+}
+
+.footer-box img {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+.form-control {
+  width: 100%;
+  max-width: 250px;
+  margin: 25px 0;
+  padding: 10px;
+  box-shadow: none;
+  border: none;
+  border-radius: 0;
+}
+
+.subscribe-btn {
+  padding: 8px 25px;
+  border-radius: 0;
+  background-image: linear-gradient(to right, #a517ba, #5f1782);
+  color: #fff;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.copy-right {
+  margin-bottom: 0;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
