@@ -87,6 +87,11 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 50px;
+}
+
 body {
   font-family: sans-serif;
   display: flex;
