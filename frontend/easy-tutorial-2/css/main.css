@@ -375,6 +375,53 @@ body {
   display: inline-block;
   font-size: 12px;
 }
+
+
+/* ----- social media style ----- */
+
+#social-media .container {
+  justify-content: center;
+}
+
+#social-media {
+  background: #f8f9fa;
+  padding: 100px 0;
+}
+
+#social-media h3 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  width: 100%;
+  text-align: center;
+}
+
+.social-icons img {
+  width: 60px;
+  transition: 0.5s;
+}
+
+.social-icons a:hover img {
+  transform: translateY(-10px);
+}
+
+.social-icons a {
+  display: inline-block;
+}
+
+.left-col.social-icons, .right-col.social-icons {
+  text-align: center;
+}
+
+@media only screen and (min-width: 901px) {
+  .left-col.social-icons {
+    text-align: end;
+  }
+  
+  .right-col.social-icons {
+    text-align: start;
+  }
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
